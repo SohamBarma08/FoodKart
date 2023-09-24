@@ -1,4 +1,5 @@
 const express = require("express");
+const { query } = require('express-validator');
 const app = express();
 const port = 5000;
 const mongoDB = require("./db")

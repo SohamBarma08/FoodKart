@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
+const { query } = require('express-validator');
 
 router.post("/createuser", async (req, res) => {
   try {
