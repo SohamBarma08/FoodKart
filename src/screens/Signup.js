@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [credentials, setCredentials] = useState({
-    name: "",
-    email: "",
-    password: "",
-    geolocation: "",
+    name: '',
+    email: '',
+    password: '',
+    glocation: '',
   })
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default function Signup() {
         name: credentials.name,
         email: credentials.email,
         password: credentials.password,
-        location: credentials.geolocation,
+        location: credentials.glocation,
       }),
     });
     const json = await response.json();
