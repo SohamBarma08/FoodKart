@@ -7,13 +7,12 @@ export default function Card(props) {
   let data = useCart();
   const priceRef = useRef();
   let options = props.options;
-  let foodItem = props.item;
+  //let foodItem = props.item;
   let priceOptions = Object.keys(options);
   const [qty, setQty] = useState(1);
-  const [size, setSize] = useState("");
+  const [size, setSize] = useState(" ");
 
   const handleAddToCart = async() => {
-
     let food = []
     for (const item of data) {
       if (item.id === props.foodItem._id) {
@@ -33,7 +32,6 @@ export default function Card(props) {
       }
       return
     }
-
     await dispatch({type:"ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, qty: qty, size: size })
     //await console.log(data)
   }
